@@ -4,47 +4,40 @@ node() {
     currentBuild.result = "SUCCESS"
 
     try {
-        stage 'Checkout'
+        stage("Checkout") {
             checkout scm
+        }
 
-        stage 'Build'
+        stage("Checkout") {
             sh 'docker build -t vaulttest .'
+        }
 
-        stage 'Test'
-            sh 'bash start_docker.sh'
-            sh 'sudo pip install testinfra'
-            sh 'sleep 150 && testinfra --connection=docker --hosts=vaulttest'
-            sh 'docker kill vaulttest'
-            sh 'docker rm vaulttest'
+        stage("Test") {
+            sh 'bash scripts/start_docker.sh'
+            sh 'testinfra --connection=docker --hosts=vaulttest'
+        }
 
-        stage 'Git tag & Push'
-            sh 'git rev-parse HEAD | cut -c1-12 > GIT_COMMIT'
-            sh '''if git rev-parse -q --verify "refs/tags/$(cat GIT_COMMIT)" >/dev/null; then
-                      echo "Current tag found"
-                  else
-                      git config --global user.email "jenkins@dj-wasabi.local"
-                      git config --global user.name "Jenkins"
+        removeTest()
+        gitTag()
 
-                      git tag -m $(cat GIT_COMMIT) -a $(cat GIT_COMMIT)
-                      git push --tags
-                  fi'''
-
-        stage 'Docker tag & Push'
+        stage("'Docker tag & Push") {
             sh 'docker tag vaulttest 192.168.1.210:5000/vault:$(cat GIT_COMMIT)'
             sh 'docker tag vaulttest 192.168.1.210:5000/vault:latest'
             sh 'docker push 192.168.1.210:5000/vault:$(cat GIT_COMMIT)'
             sh 'docker push 192.168.1.210:5000/vault:latest'
+        }
 
-        stage 'cleanup'
+        stage("cleanup") {
             sh 'docker rmi 192.168.1.210:5000/vault:$(cat GIT_COMMIT)'
             sh 'docker rmi 192.168.1.210:5000/vault:latest'
             sh 'docker rmi vaulttest:latest'
+        }
     }
 
     catch (caughtError) {
         err = caughtError
         currentBuild.result = "FAILURE"
-        notifyFailed()
+        jobFailed()
     }
 
     finally {
@@ -65,22 +58,30 @@ def notifyFailed() {
     )
 }
 
-def removeDockers() {
-    stage "Cleanup after fail"
-        sh 'molecule destroy'
+def removeTest() {
+    stage("Remove containers") {
+        sh 'docker kill vaulttest'
+        sh 'docker rm vaulttest'
+    }
 }
 
+def jobFailed() {
+    removeTest()
+    sh 'docker rmi vaulttest'
+    sh 'docker rmi $(docker images | grep "^<none" | awk "{print $3}")'
+}
 
 def gitTag() {
-  stage 'Git Tag'
-    sh 'git rev-parse HEAD | cut -c1-12 > GIT_COMMIT'
-    sh '''if git rev-parse -q --verify "refs/tags/$(cat GIT_COMMIT)" >/dev/null; then
-              echo "Current tag found"
-          else
-              git config --global user.email "jenkins@dj-wasabi.local"
-              git config --global user.name "Jenkins"
+    stage("Git Tag") {
+        sh 'git rev-parse HEAD | cut -c1-12 > GIT_COMMIT'
+        sh '''if git rev-parse -q --verify "refs/tags/$(cat GIT_COMMIT)" >/dev/null; then
+                  echo "Current tag found"
+              else
+                  git config --global user.email "jenkins@dj-wasabi.local"
+                  git config --global user.name "Jenkins"
 
-              git tag -m $(cat GIT_COMMIT) -a $(cat GIT_COMMIT)
-              git push --tags
-          fi'''
+                  git tag -m $(cat GIT_COMMIT) -a $(cat GIT_COMMIT)
+                  git push --tags
+              fi'''
+    }
 }

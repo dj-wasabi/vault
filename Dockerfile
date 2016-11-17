@@ -1,24 +1,32 @@
-FROM debian:stable
+FROM alpine:3.4
 MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
-ENV VAULT_VERSION=0.6.0
+ENV VAULT_VERSION=0.6.2 \
+    VAULT_USERNAME="vault" \
+    VAULT_USERID=994
 
-RUN apt-get update && \
-    apt-get install -y curl unzip bash net-tools ca-certificates && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk --update --no-cache add curl libcap bash python openssl net-tools ca-certificates && \
+    rm -rf /var/cache/apk/*
 
-RUN curl -sSLo /tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip && \
+ADD run-vault.sh /bin/run-vault.sh
+
+RUN adduser -D -u ${VAULT_USERID} ${VAULT_USERNAME} && \
+    mkdir /vault /vault/ssl && \
+    chown -R ${VAULT_USERNAME} /vault && \
+    curl -sSLo /tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip && \
     unzip -d /bin /tmp/vault.zip && \
     rm -rf /tmp/vault.zip && \
-    chmod +x /bin/vault && \
-    mkdir /vault
+    chmod +x /bin/run-vault.sh /bin/vault && \
+    setcap cap_ipc_lock=+ep $(readlink -f $(which vault))
 
-ADD config.hcl /vault/config.hcl
-ONBUILD ADD config.hcl /vault/config.hcl
+USER ${VAULT_USERNAME}
 
 EXPOSE 8200
-ENV VAULT_ADDR "http://127.0.0.1:8200"
+EXPOSE 8201
+VOLUME /vault/ssl
+VOLUME /vault
+VOLUME /vault/audit
 
-ENTRYPOINT ["/bin/vault"]
-CMD ["server", "-config", "/vault/config.hcl"]
+ENV VAULT_ADDR "https://127.0.0.1:8200"
+
+CMD ["/bin/run-vault.sh"]
