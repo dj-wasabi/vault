@@ -60,8 +60,8 @@ def notifyFailed() {
 
 def removeTest() {
     stage("Remove containers") {
-        sh 'docker kill vaulttest'
-        sh 'docker rm vaulttest'
+        sh 'docker kill vaulttest consultest'
+        sh 'docker rm vaulttest consultest'
     }
 }
 
