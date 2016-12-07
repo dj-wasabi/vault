@@ -5,7 +5,7 @@ ENV VAULT_VERSION=0.6.2 \
     VAULT_USERNAME="vault" \
     VAULT_USERID=994
 
-RUN apk --update --no-cache add curl libcap bash python openssl net-tools ca-certificates && \
+RUN apk --update --no-cache add curl tini libcap bash python openssl net-tools ca-certificates && \
     rm -rf /var/cache/apk/*
 
 ADD run-vault.sh /bin/run-vault.sh
@@ -29,4 +29,5 @@ VOLUME /vault/audit
 
 ENV VAULT_ADDR "https://127.0.0.1:8200"
 
-CMD ["/bin/run-vault.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/bin/run-vault.sh"]
+CMD []

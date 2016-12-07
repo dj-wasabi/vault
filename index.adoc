@@ -1,0 +1,20 @@
+:toc: left
+:coderay-css: style
+:sectnums:
+
+= Consul
+
+== Introduction
+
+Container running Alpine 3.4 and Vault 0.6.2.
+
+== Container
+
+=== User
+
+Vault is running as a non-root user: `vault`. There is not really a need for running Vault as root.
+
+We do have to do something as root. We have to lock the memory so it won't be swapped to disk. One of the actions in the Dockerfile is executing the `setcap cap_ipc_lock=+ep`. This allows the process to lock memory, even if we are running the process as a non-root user.
+
+=== Ports
+
