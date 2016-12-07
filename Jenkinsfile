@@ -12,12 +12,7 @@ node() {
             sh 'docker build -t vaulttest .'
         }
 
-        stage("Test") {
-            sh 'bash scripts/start_docker.sh'
-            sh 'testinfra --connection=docker --hosts=vaulttest'
-        }
 
-        removeTest()
         gitTag()
 
         stage("'Docker tag & Push") {
