@@ -17,15 +17,12 @@ RUN adduser -D -u ${VAULT_USERID} ${VAULT_USERNAME} && \
     unzip -d /bin /tmp/vault.zip && \
     rm -rf /tmp/vault.zip && \
     chmod +x /bin/run-vault.sh /bin/vault && \
-    setcap cap_ipc_lock=+ep $(readlink -f $(which vault))
+    setcap cap_ipc_lock=+ep $(readlink -f /bin/vault)
 
 USER ${VAULT_USERNAME}
 
-EXPOSE 8200
-EXPOSE 8201
-VOLUME /vault/ssl
-VOLUME /vault
-VOLUME /vault/audit
+EXPOSE 8200 8201
+VOLUME ["/vault/ssl", "/vault/audit"]
 
 ENV VAULT_ADDR "https://127.0.0.1:8200"
 

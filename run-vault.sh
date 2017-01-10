@@ -31,7 +31,7 @@ backend "consul" {
 # Vault listen configuration.
 listener "tcp" {
     address = "0.0.0.0:8200"
-    tls_disable = ${TLS_DISABLE:-0}
+    tls_disable = ${TLS_DISABLE:-1}
     ${TLS_KEY}
     ${TLS_CRT}
 }
