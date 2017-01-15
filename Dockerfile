@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:latest
 MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
 ENV VAULT_VERSION=0.6.4 \
@@ -11,7 +11,7 @@ RUN apk --update --no-cache add curl tini libcap bash python openssl net-tools c
 ADD run-vault.sh /bin/run-vault.sh
 
 RUN adduser -D -u ${VAULT_USERID} ${VAULT_USERNAME} && \
-    mkdir /vault /vault/ssl && \
+    mkdir /vault /vault/ssl /vault/config && \
     chown -R ${VAULT_USERNAME} /vault && \
     curl -sSLo /tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip && \
     unzip -d /bin /tmp/vault.zip && \
@@ -22,7 +22,7 @@ RUN adduser -D -u ${VAULT_USERID} ${VAULT_USERNAME} && \
 USER ${VAULT_USERNAME}
 
 EXPOSE 8200 8201
-VOLUME ["/vault/ssl", "/vault/audit"]
+VOLUME ["/vault/ssl", "/vault/config", "/vault/audit"]
 
 ENV VAULT_ADDR "https://127.0.0.1:8200"
 

@@ -1,4 +1,4 @@
-# wdijkerman/consul
+# wdijkerman/vault
 
 ![Docker Stars](https://img.shields.io/docker/stars/wdijkerman/vault.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/wdijkerman/vault.svg) [![](https://images.microbadger.com/badges/image/wdijkerman/vault.svg)](https://microbadger.com/images/wdijkerman/vault "Get your own image badge on microbadger.com") [![Build Status](https://travis-ci.org/dj-wasabi/vault.svg?branch=master)](https://travis-ci.org/dj-wasabi/vault) 
 
@@ -17,6 +17,7 @@ The versions in this Docker container:
 The following volumes are available:
 
 * /vault/ssl
+* /vault/config
 * /vault/audit
 
 ### User
@@ -44,7 +45,15 @@ Just run the following command to download the container:
 docker pull wdijkerman/vault
 ```
 
+### Arguments
+
+There are several arguments that can be used for configuring this container.
 
 
+CONSUL_HOST
+CONSUL_PORT
+CONSUL_SCHEME
+CONSUL_TLS_SKIP_VERIFY
+CONSUL_TOKEN
 
 --cap-add IPC_LOCK
