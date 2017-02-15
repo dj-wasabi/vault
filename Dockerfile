@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
-ENV VAULT_VERSION=0.6.4 \
+ENV VAULT_VERSION=0.6.5 \
     VAULT_USERNAME="vault" \
     VAULT_USERID=994
 

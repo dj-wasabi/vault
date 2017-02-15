@@ -30,7 +30,8 @@ The UID used in this container is 994. So make sure the id is already available 
 
 ### Versions
 
-- `0.6.4`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/docker-consul/blob/master/Dockerfile)
+- `0.6.4`, [(Dockerfile)](https://github.com/dj-wasabi/docker-consul/blob/master/Dockerfile)
+- `0.6.5`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/docker-consul/blob/master/Dockerfile)
 
 ### Python?
 
