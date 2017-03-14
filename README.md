@@ -26,7 +26,7 @@ Vault is running as user vault. With the following capabilities (which are confi
 
 - cap_ipc_lock (Should not swap. Also `--cap-add IPC_LOCK` should be added to the command line when to start the Vault)
 
-The UID used in this container is 994. So make sure the id is already available on the host running the container when host mounts are used.
+The UID used in this container is 1051. So make sure the id is already available on the host running the container when host mounts are used.
 
 ### Versions
 

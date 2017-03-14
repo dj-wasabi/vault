@@ -1,9 +1,11 @@
 FROM alpine:latest
 MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
+ARG VAULT_USERID
+
 ENV VAULT_VERSION=0.6.5 \
     VAULT_USERNAME="vault" \
-    VAULT_USERID=994
+    VAULT_USERID=${VAULT_USERID:-1051}
 
 RUN apk --update --no-cache add curl tini libcap bash python openssl net-tools ca-certificates && \
     rm -rf /var/cache/apk/*
