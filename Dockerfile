@@ -3,7 +3,7 @@ MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
 ARG VAULT_USERID
 
-ENV VAULT_VERSION=0.7.2 \
+ENV VAULT_VERSION=0.7.3 \
     VAULT_USERNAME="vault" \
     VAULT_USERID=${VAULT_USERID:-1051}
 
