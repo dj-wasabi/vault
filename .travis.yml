@@ -13,6 +13,7 @@ before_install:
   - docker run -d --cap-add IPC_LOCK --name vault -p 8200:8200 -e VAULT_ADDR=http://vault.service.consul:8200 vault
   - sleep 5
   - docker ps -a
+  - docker logs vault
 
 script:
   - testinfra --connection=docker --hosts=vault
