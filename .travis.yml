@@ -9,9 +9,9 @@ before_install:
   - docker run -d --name consul -p 8500:8500 -p 8400:8400 -p 8300:8300 -p 8600:53/udp wdijkerman/consul -server -bootstrap -ui-dir /consul/ui
   - docker build -t vault .
   - pip install testinfra
-  - COUNTER=0; until docker logs consul 2>&1 | grep 'agent: Synced node info' >/dev/null || [ $COUNTER -eq 15 ]; do sleep 2;COUNTER=$(expr $COUNTER + 1); done
+  - sleep 10
   - docker run -d --cap-add IPC_LOCK --name vault -p 8200:8200 -e VAULT_ADDR=http://vault.service.consul:8200 vault
-  - COUNTER=0; until docker logs vault 2>&1 | grep 'Vault server started' >/dev/null || [ $COUNTER -eq 15 ]; do sleep 2;COUNTER=$(expr $COUNTER + 1); done
+  - sleep 5
   - docker ps -a
 
 script:
