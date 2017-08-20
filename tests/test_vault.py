@@ -1,6 +1,6 @@
 
-def test_socker(Socket):
-    assert Socket('tcp://0.0.0.0:8200').is_listening
+# def test_socker(Socket):
+#     assert Socket('tcp://0.0.0.0:8200').is_listening
 
 
 def test_jenkins_key_public(File):
