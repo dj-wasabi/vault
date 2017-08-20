@@ -1,0 +1,15 @@
+sudo: required
+language: python
+services:
+  - docker
+python:
+  - "2.7"
+
+before_install:
+  - pip install testinfra
+  - docker run -d --name consul -p 127.0.0.1:8500:8500 -p 127.0.0.1:8400:8400 -p 127.0.0.1:8300:8300 -p 127.0.0.1:8600:53/udp wdijkerman/consul -server -bootstrap -ui-dir /consul/ui
+  - docker build -t vault .
+  - docker run -d --cap-add IPC_LOCK --name vault -p 127.0.0.1:8200:82000 -e VAULT_ADDR=http://vault.service.consul:8200 vault
+
+script:
+  - testinfra --connection=docker --hosts=vault
