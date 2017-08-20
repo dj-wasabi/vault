@@ -11,7 +11,7 @@ before_install:
   - pip install testinfra
   - sleep 10
   - docker run -d --cap-add IPC_LOCK --name vault -p 8200:8200 -e CONSUL_HOST="$(/sbin/ip route|awk '/default/ { print $3 }')" -e VAULT_ADDR=http://vault.service.consul:8200 vault
-  - sleep 5
+  - sleep 15
   - docker ps -a
   - docker logs vault
 
