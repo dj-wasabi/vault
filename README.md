@@ -61,3 +61,7 @@ CONSUL_TLS_SKIP_VERIFY
 CONSUL_TOKEN
 
 --cap-add IPC_LOCK
+
+## Tests
+
+Testinfra
