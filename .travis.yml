@@ -6,6 +6,10 @@ python:
   - "2.7"
 
 before_install:
+  - sudo apt-get update
+  - sudo apt-get upgrade -y docker-ce
+  - service docker restart
+  - docker --version
   - docker run -d --name consul -p 8500:8500 -p 8400:8400 -p 8300:8300 -p 8600:53/udp wdijkerman/consul -server -bootstrap -ui-dir /consul/ui
   - docker build -t vault .
   - sleep 10
