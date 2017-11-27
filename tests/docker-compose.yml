@@ -1,0 +1,25 @@
+---
+
+version: "2"
+
+services:
+  consul:
+    image: wdijkerman/consul
+    container_name: "consul"
+    hostname: "consul"
+    ports:
+      - "8500:8500"
+    volumes:
+      - ./consul-config.json:/consul/config/consul.json
+
+  vault:
+    image: wdijkerman/vault
+    container_name: "vault"
+    hostname: "vault"
+    ports:
+      - "8200:8200"
+    environment:
+      - VAULT_ADDR=http://vault.service.consul:8200
+      - CONSUL_HOST=consul
+    cap_add:
+      - IPC_LOCK
