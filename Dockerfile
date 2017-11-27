@@ -3,7 +3,7 @@ MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
 ARG VAULT_USERID
 
-ENV VAULT_VERSION=0.8.3 \
+ENV VAULT_VERSION=0.9.0 \
     VAULT_USERNAME="vault" \
     VAULT_USERID=${VAULT_USERID:-1051}
 
@@ -26,7 +26,7 @@ USER ${VAULT_USERNAME}
 EXPOSE 8200 8201
 VOLUME ["/vault/ssl", "/vault/config", "/vault/audit"]
 
-HEALTHCHECK --interval=10s --timeout=5s --start-period=5s CMD curl -skXGET https://127.0.0.1:8200/v1/sys/health || exit 1
+HEALTHCHECK --interval=10s --timeout=5s CMD curl -skXGET https://127.0.0.1:8200/v1/sys/health || exit 1
 ENV VAULT_ADDR "https://127.0.0.1:8200"
 
 ENTRYPOINT ["/sbin/tini", "--", "/bin/run-vault.sh"]
