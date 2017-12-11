@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.7
 MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
 ARG VAULT_USERID
