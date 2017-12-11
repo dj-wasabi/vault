@@ -8,8 +8,8 @@ This is an Docker container for Vault running on Alpine.
 
 The versions in this Docker container:
 
-* alpine: 3.5
-* vault: 0.8.1
+* alpine: 3.7
+* vault: 0.9.0
 * python: 2.7.13
 
 ### Volumes
