@@ -9,7 +9,7 @@ This is an Docker container for Vault running on Alpine.
 The versions in this Docker container:
 
 * alpine: 3.7
-* vault: 0.9.0
+* vault: 0.9.2
 * python: 2.7.13
 
 ### Volumes
@@ -34,8 +34,9 @@ The UID used in this container is 1051. So make sure the id is already available
 - `0.6.5`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/66494b152453c34e0094517383b2a2e38f5fdb8b/Dockerfile)
 - `0.7.2`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/de4519d83b9c33a66d4f47dd4c0f688f358834bd/Dockerfile)
 - `0.7.3`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/14574e99a643df5ea788c080f4407db2c1d682cb/Dockerfile)
-- `0.8.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/79b143040f4720610034ea08462957403dce7c9c/Dockerfile)
-- `0.8.1`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
+- `0.8.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/99fd6aa38f4e7da3a4cbaa7adf74665b4a6e5f00/Dockerfile)
+- `0.8.1`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/79b143040f4720610034ea08462957403dce7c9c/Dockerfile)
+- `0.9.2`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
 
 ### Python?
 
