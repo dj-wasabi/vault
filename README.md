@@ -9,7 +9,7 @@ This is an Docker container for Vault running on Alpine.
 The versions in this Docker container:
 
 * alpine: 3.7
-* vault: 0.9.6
+* vault: 0.10.0
 * python: 2.7.13
 
 ### Volumes
@@ -37,7 +37,8 @@ The UID used in this container is 1051. So make sure the id is already available
 - `0.8.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/99fd6aa38f4e7da3a4cbaa7adf74665b4a6e5f00/Dockerfile)
 - `0.8.1`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/79b143040f4720610034ea08462957403dce7c9c/Dockerfile)
 - `0.9.2`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/702f4fc7518d0891386f78d9f8d8f0b2b86893a5/Dockerfile)
-- `0.9.6`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
+- `0.9.6`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/c710ab97f1f9e86a273267fec577e320d6ce57ac/Dockerfile)
+- `0.10.0`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
 
 ### Python?
 
@@ -84,6 +85,6 @@ See file: License
 
 ## Issues
 
-Please report issues at https://github.com/dj-wasabi/consul/issues 
+Please report issues at https://github.com/dj-wasabi/vault/issues 
 
 Pull Requests are welcome!
