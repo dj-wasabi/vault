@@ -10,7 +10,7 @@ services:
     ports:
       - "8500:8500"
     volumes:
-      - ./consul-config.json:/consul/config/consul.json
+      - ./tests/consul-config.json:/consul/config/consul.json
 
   vault:
     image: wdijkerman/vault

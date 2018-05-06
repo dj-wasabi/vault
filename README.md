@@ -54,7 +54,21 @@ Just run the following command to download the container:
 docker pull wdijkerman/vault
 ```
 
-### Arguments
+### Configuration
+
+Suggested to use a secure Vault running is to make sure it can not use the swap. When configuring the container, please make sure it ran with `--cap-add IPC_LOCK`.
+
+There are 2 ways to configure Vault:
+
+* Place your own hcl configuration files;
+* Set some environment variables and basic configuration file is created;
+
+#### Configuration file
+
+Make sure that before you start the Vault container a file is present in the container on location `/vault/config/config.hcl`.
+Please take a look at https://www.vaultproject.io/docs/configuration/index.html for correctly configuring the Vault instance.
+
+#### Environment variables
 
 There are several arguments that can be used for configuring this container.
 
@@ -62,11 +76,13 @@ Environment | Description
 --- | ---
 CONSUL_HOST | The fqdn or ip of the Consul agent. Default: `consul`
 CONSUL_PORT | The port on which Consul is available. Default: `8500`
-CONSUL_SCHEME | 
-CONSUL_TLS_SKIP_VERIFY |
-CONSUL_TOKEN | 
-
---cap-add IPC_LOCK
+CONSUL_SCHEME | If consul is on http or https. Default: `http`
+CONSUL_TLS_SKIP_VERIFY | If the ssl certificate should be verified or not. Default: `1`
+CONSUL_TOKEN | If an Consul ACL token needs to be used for Vault.
+TLS_CRT_FILE | The location to the SSL CRT file.
+TLS_KEY_FILE | The location to the SSL KEY file.
+VAULT_LISTEN_ADDR | The IP/fqdn on which this Vault instance is listening on.
+VAULT_TCP_CLUSTER_ADDR | The IP/fqdn on which the Vault Cluster is listening on.
 
 ## Tests
 

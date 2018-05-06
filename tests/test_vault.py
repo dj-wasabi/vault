@@ -1,3 +1,4 @@
+import requests
 
 def test_socket(Socket):
     assert Socket('tcp://0.0.0.0:8200').is_listening
@@ -14,3 +15,9 @@ def test_vault_config(File):
 def test_users(User):
     user = User("vault")
     assert user.exists
+
+
+def test_status():
+    status = requests.get("http://127.0.0.1:8200/v1/sys/health")
+    assert status.json()['sealed']
+    assert not status.json()['initialized']
