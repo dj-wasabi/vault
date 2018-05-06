@@ -10,7 +10,7 @@ ENV VAULT_VERSION=0.10.1 \
 RUN apk --update --no-cache add curl tini libcap bash python openssl net-tools ca-certificates && \
     rm -rf /var/cache/apk/*
 
-ADD run-vault.sh /bin/run-vault.sh
+ADD src/bin/run-vault.sh /bin/run-vault.sh
 
 RUN adduser -D -u ${VAULT_USERID} ${VAULT_USERNAME} && \
     mkdir /vault /vault/ssl /vault/config && \
