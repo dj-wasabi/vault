@@ -9,7 +9,7 @@ This is an Docker container for Vault running on Alpine.
 The versions in this Docker container:
 
 * alpine: 3.7
-* vault: 0.10.1
+* vault: 0.10.4
 * python: 2.7.13
 
 ### Volumes
