@@ -1,9 +1,9 @@
-FROM alpine:3.7
+FROM alpine:3.8
 MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
 ARG VAULT_USERID
 
-ENV VAULT_VERSION=0.10.4 \
+ENV VAULT_VERSION=0.11.0 \
     VAULT_USERNAME="vault" \
     VAULT_USERID=${VAULT_USERID:-1051}
 
