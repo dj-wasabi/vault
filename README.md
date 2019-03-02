@@ -40,7 +40,8 @@ The UID used in this container is 1051. So make sure the id is already available
 - `0.9.6`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/c710ab97f1f9e86a273267fec577e320d6ce57ac/Dockerfile)
 - `0.10.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/65320488ca30c444e64b743bbcf154ebf9a5a038/Dockerfile)
 - `0.10.4`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/1b79dac2c49c6be8a0618d544c2c896ef950a5f8/Dockerfile)
-- `0.11.0`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
+- `0.11.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/9ad29339d9a3aa6a0cfe2c878673704a14ca1a66/Dockerfile)
+- `1.0.3`, `latest` [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
 
 ### Python?
 
