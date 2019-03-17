@@ -1,6 +1,6 @@
 # wdijkerman/vault
 
-![Docker Stars](https://img.shields.io/docker/stars/wdijkerman/vault.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/wdijkerman/vault.svg) [![](https://images.microbadger.com/badges/image/wdijkerman/vault.svg)](https://microbadger.com/images/wdijkerman/vault "Get your own image badge on microbadger.com") [![Build Status](https://travis-ci.org/dj-wasabi/vault.svg?branch=master)](https://travis-ci.org/dj-wasabi/vault) 
+![Docker Stars](https://img.shields.io/docker/stars/wdijkerman/vault.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/wdijkerman/vault.svg) [![](https://images.microbadger.com/badges/image/wdijkerman/vault.svg)](https://microbadger.com/images/wdijkerman/vault "Get your own image badge on microbadger.com") [![Build Status](https://travis-ci.org/dj-wasabi/vault.svg?branch=master)](https://travis-ci.org/dj-wasabi/vault)
 
 ## Introduction
 
@@ -9,7 +9,7 @@ This is an Docker container for Vault running on Alpine.
 The versions in this Docker container:
 
 * alpine: 3.8
-* vault: 0.11.0
+* vault: 1.0.3
 * python: 2.7.13
 
 ### Volumes
@@ -93,7 +93,9 @@ Testinfra
 ## how to's
 
 [Setting up a secure Consul cluster](https://werner-dijkerman.nl/2017/01/09/setting-up-a-secure-consul-cluster-with-docker/)
+
 [Configuring Access Control Lists](https://werner-dijkerman.nl/2017/01/11/configuring-access-control-lists-in-consul/)
+
 [Setting up a secure Vault with a Consul backend](https://werner-dijkerman.nl/2017/01/15/setting-up-a-secure-vault-with-a-consul-backend/)
 
 ## License
@@ -104,6 +106,6 @@ See file: License
 
 ## Issues
 
-Please report issues at https://github.com/dj-wasabi/vault/issues 
+Please report issues at https://github.com/dj-wasabi/vault/issues
 
 Pull Requests are welcome!

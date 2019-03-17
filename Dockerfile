@@ -1,5 +1,4 @@
 FROM alpine:3.8
-MAINTAINER 	Werner Dijkerman <ikben@werner-dijkerman.nl>
 
 ARG VAULT_USERID
 
@@ -10,18 +9,18 @@ ENV VAULT_VERSION=1.0.3 \
 RUN apk --update --no-cache add curl tini libcap bash python openssl net-tools ca-certificates && \
     rm -rf /var/cache/apk/*
 
-ADD src/bin/run-vault.sh /bin/run-vault.sh
+COPY src/bin/run-vault.sh /bin/run-vault.sh
 
-RUN adduser -D -u ${VAULT_USERID} ${VAULT_USERNAME} && \
+RUN adduser -D -u $VAULT_USERID $VAULT_USERNAME && \
     mkdir /vault /vault/ssl /vault/config && \
-    chown -R ${VAULT_USERNAME} /vault && \
-    curl -sSLo /tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip && \
+    chown -R $VAULT_USERNAME /vault && \
+    curl -sSLo /tmp/vault.zip https://releases.hashicorp.com/vault/$VAULT_VERSION/vault_${VAULT_VERSION}_linux_amd64.zip && \
     unzip -d /bin /tmp/vault.zip && \
     rm -rf /tmp/vault.zip && \
     chmod +x /bin/run-vault.sh /bin/vault && \
     setcap cap_ipc_lock=+ep $(readlink -f /bin/vault)
 
-USER ${VAULT_USERNAME}
+USER $VAULT_USERNAME
 
 EXPOSE 8200 8201
 VOLUME ["/vault/ssl", "/vault/config", "/vault/audit"]
