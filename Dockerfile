@@ -1,12 +1,13 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
 ARG VAULT_USERID
 
-ENV VAULT_VERSION=1.5.0 \
+ENV VAULT_VERSION=1.5.3 \
     VAULT_USERNAME="vault" \
     VAULT_USERID=${VAULT_USERID:-1051}
 
-RUN apk --update --no-cache add curl tini libcap bash python openssl net-tools ca-certificates && \
+# hadolint ignore=DL3018
+RUN apk --update --no-cache add curl tini libcap bash python3 openssl net-tools ca-certificates && \
     rm -rf /var/cache/apk/*
 
 COPY src/bin/run-vault.sh /bin/run-vault.sh
@@ -18,7 +19,7 @@ RUN adduser -D -u $VAULT_USERID $VAULT_USERNAME && \
     unzip -d /bin /tmp/vault.zip && \
     rm -rf /tmp/vault.zip && \
     chmod +x /bin/run-vault.sh /bin/vault && \
-    setcap cap_ipc_lock=+ep $(readlink -f /bin/vault)
+    setcap cap_ipc_lock=+ep "$(readlink -f /bin/vault)"
 
 USER $VAULT_USERNAME
 
