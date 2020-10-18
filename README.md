@@ -28,33 +28,6 @@ Vault is running as user vault. With the following capabilities (which are confi
 
 The UID used in this container is 1051. So make sure the id is already available on the host running the container when host mounts are used.
 
-### Versions
-
-- `0.6.2`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/d4fe374d29508926bed6c188b05c0764016f3a52/Dockerfile)
-- `0.6.5`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/66494b152453c34e0094517383b2a2e38f5fdb8b/Dockerfile)
-- `0.7.2`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/de4519d83b9c33a66d4f47dd4c0f688f358834bd/Dockerfile)
-- `0.7.3`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/14574e99a643df5ea788c080f4407db2c1d682cb/Dockerfile)
-- `0.8.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/99fd6aa38f4e7da3a4cbaa7adf74665b4a6e5f00/Dockerfile)
-- `0.8.1`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/79b143040f4720610034ea08462957403dce7c9c/Dockerfile)
-- `0.9.2`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/702f4fc7518d0891386f78d9f8d8f0b2b86893a5/Dockerfile)
-- `0.9.6`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/c710ab97f1f9e86a273267fec577e320d6ce57ac/Dockerfile)
-- `0.10.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/65320488ca30c444e64b743bbcf154ebf9a5a038/Dockerfile)
-- `0.10.4`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/1b79dac2c49c6be8a0618d544c2c896ef950a5f8/Dockerfile)
-- `0.11.0`, [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/9ad29339d9a3aa6a0cfe2c878673704a14ca1a66/Dockerfile)
-- `1.0.3`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/71d20340552532d5b31f0f08144c899b2c3754d6/Dockerfile)
-- `1.1.0`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/4cd23aee468f403e92fa553a0fd2924a4ac07738/Dockerfile)
-- `1.1.2`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/13c2601e52610fcfce497c7bb4deefcbfaef79f4/Dockerfile)
-- `1.1.3`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/dd8e57649842a1ad01133be2b6c5038896a9b456/Dockerfile)
-- `1.2.0`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/1792b83ac09b1a812ab687e0cfc3b42ad9b329ea/Dockerfile)
-- `1.2.2`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/e59b95ee8f598984027d84097ded789e8cee841b/Dockerfile)
-- `1.2.3`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/9c99c9146d19e51e049251af4c4b54e86f90d254/Dockerfile)
-- `1.3.0`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/0cb1fd6d67c2d07d06c4865dea357e4eb6b993db/Dockerfile)
-- `1.3.1`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/d2354827e1cd9d4c2c142d5c701424d6061ca3c1/Dockerfile
-- `1.3.2`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/c1b731dca7138ff74741f151a5d0723f92cbfce7/Dockerfile)
-- `1.4.0`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/5f09ab75fedbac1c44e8d919a4bc8c39b564d4ae/Dockerfile)
-- `1.5.0`,  [(Dockerfile)](https://github.com/dj-wasabi/vault/blob/a900b8ddc4b63c682ce2c874b24029a63daad3f1/Dockerfile)
-- `1.5.3`, `latest`[(Dockerfile)](https://github.com/dj-wasabi/vault/blob/master/Dockerfile)
-
 ### Python?
 
 Python is also installed in the container. Python is used for testing the container, which is done with the tool `testinfra`.
