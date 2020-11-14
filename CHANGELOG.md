@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/dj-wasabi/vault/tree/1.6.0) (2020-11-14)
+
+[Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.5...1.6.0)
+
+**Merged pull requests:**
+
+- Updating to Vault 1.6.0 [\#29](https://github.com/dj-wasabi/vault/pull/29) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [1.5.5](https://github.com/dj-wasabi/vault/tree/1.5.5) (2020-10-28)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.4...1.5.5)
@@ -115,13 +123,16 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.11.0...1.0.3)
 
+**Merged pull requests:**
+
+- Updating Vault to 1.0.3 [\#12](https://github.com/dj-wasabi/vault/pull/12) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [0.11.0](https://github.com/dj-wasabi/vault/tree/0.11.0) (2018-08-28)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.10.4...0.11.0)
 
 **Merged pull requests:**
 
-- Updating Vault to 1.0.3 [\#12](https://github.com/dj-wasabi/vault/pull/12) ([dj-wasabi](https://github.com/dj-wasabi))
 - Updating Vault 0.11.0 and alpine to 3.8 [\#11](https://github.com/dj-wasabi/vault/pull/11) ([dj-wasabi](https://github.com/dj-wasabi))
 
 ## [0.10.4](https://github.com/dj-wasabi/vault/tree/0.10.4) (2018-08-24)
