@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.1](https://github.com/dj-wasabi/vault/tree/1.6.1) (2020-12-18)
+
+[Full Changelog](https://github.com/dj-wasabi/vault/compare/1.6.0...1.6.1)
+
+**Merged pull requests:**
+
+- Updating to Vault 1.6.1 [\#30](https://github.com/dj-wasabi/vault/pull/30) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [1.6.0](https://github.com/dj-wasabi/vault/tree/1.6.0) (2020-11-14)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.5...1.6.0)
