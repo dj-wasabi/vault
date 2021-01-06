@@ -1,10 +1,18 @@
 # Changelog
 
+## [Unreleased](https://github.com/dj-wasabi/vault/tree/HEAD)
+
+[Full Changelog](https://github.com/dj-wasabi/vault/compare/1.6.1...HEAD)
+
+**Implemented enhancements:**
+
+- Added GH Action to automatically update CHANGELOG.md [\#31](https://github.com/dj-wasabi/vault/pull/31) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [1.6.1](https://github.com/dj-wasabi/vault/tree/1.6.1) (2020-12-18)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.6.0...1.6.1)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.6.1 [\#30](https://github.com/dj-wasabi/vault/pull/30) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -12,7 +20,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.5...1.6.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.6.0 [\#29](https://github.com/dj-wasabi/vault/pull/29) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -20,7 +28,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.4...1.5.5)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.5.5 [\#28](https://github.com/dj-wasabi/vault/pull/28) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -28,7 +36,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.3...1.5.4)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Update to Vault 1.5.4 [\#27](https://github.com/dj-wasabi/vault/pull/27) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -36,7 +44,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.5.0...1.5.3)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Added commit file;Updated Alpine and Vault versions [\#26](https://github.com/dj-wasabi/vault/pull/26) ([dj-wasabi](https://github.com/dj-wasabi))
 - Create blank.yml [\#25](https://github.com/dj-wasabi/vault/pull/25) ([dj-wasabi](https://github.com/dj-wasabi))
@@ -49,7 +57,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.3.2...1.4.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.4.0 [\#24](https://github.com/dj-wasabi/vault/pull/24) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -57,7 +65,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.3.1...1.3.2)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.3.2 [\#23](https://github.com/dj-wasabi/vault/pull/23) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -65,7 +73,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.3.0...1.3.1)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating Vault to 1.3.1 [\#22](https://github.com/dj-wasabi/vault/pull/22) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -73,7 +81,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.2.3...1.3.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating Vault to 1.3.0 [\#21](https://github.com/dj-wasabi/vault/pull/21) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -81,7 +89,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.2.2...1.2.3)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.2.3 [\#20](https://github.com/dj-wasabi/vault/pull/20) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -89,16 +97,13 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.2.0...1.2.2)
 
-**Merged pull requests:**
-
-- Updating to Vault 1.2.2 [\#19](https://github.com/dj-wasabi/vault/pull/19) ([dj-wasabi](https://github.com/dj-wasabi))
-
 ## [1.2.0](https://github.com/dj-wasabi/vault/tree/1.2.0) (2019-07-30)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.1.3...1.2.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
+- Updating to Vault 1.2.2 [\#19](https://github.com/dj-wasabi/vault/pull/19) ([dj-wasabi](https://github.com/dj-wasabi))
 - Updating Vault to 1.2.0 [\#18](https://github.com/dj-wasabi/vault/pull/18) ([dj-wasabi](https://github.com/dj-wasabi))
 - Updating Alpine version [\#17](https://github.com/dj-wasabi/vault/pull/17) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -106,7 +111,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.1.2...1.1.3)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 1.1.3 [\#16](https://github.com/dj-wasabi/vault/pull/16) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -114,7 +119,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.1.0...1.1.2)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating Vault to 1.1.2 [\#15](https://github.com/dj-wasabi/vault/pull/15) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -122,7 +127,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.0.3...1.1.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to 1.1.0 [\#14](https://github.com/dj-wasabi/vault/pull/14) ([dj-wasabi](https://github.com/dj-wasabi))
 - Minor changes [\#13](https://github.com/dj-wasabi/vault/pull/13) ([dj-wasabi](https://github.com/dj-wasabi))
@@ -131,7 +136,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.11.0...1.0.3)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating Vault to 1.0.3 [\#12](https://github.com/dj-wasabi/vault/pull/12) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -139,7 +144,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.10.4...0.11.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating Vault 0.11.0 and alpine to 3.8 [\#11](https://github.com/dj-wasabi/vault/pull/11) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -147,7 +152,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.10.0...0.10.4)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Update to 0.10.4 [\#10](https://github.com/dj-wasabi/vault/pull/10) ([dj-wasabi](https://github.com/dj-wasabi))
 - Some improvements [\#9](https://github.com/dj-wasabi/vault/pull/9) ([dj-wasabi](https://github.com/dj-wasabi))
@@ -157,7 +162,7 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.9.6...0.10.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to Vault 0.10.0 [\#7](https://github.com/dj-wasabi/vault/pull/7) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -165,9 +170,12 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/0.9.2...0.9.6)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updating to 0.9.6 [\#6](https://github.com/dj-wasabi/vault/pull/6) ([dj-wasabi](https://github.com/dj-wasabi))
+
+**Merged pull requests:**
+
 - Updating to Vault 0.9.5 [\#5](https://github.com/dj-wasabi/vault/pull/5) ([dj-wasabi](https://github.com/dj-wasabi))
 
 ## [0.9.2](https://github.com/dj-wasabi/vault/tree/0.9.2) (2018-01-28)
