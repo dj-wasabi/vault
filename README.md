@@ -4,6 +4,20 @@
 
 <!--TOC-->
 
+- [wdijkerman/vault](#wdijkermanvault)
+  - [Introduction](#introduction)
+    - [Volumes](#volumes)
+    - [User](#user)
+    - [Python?](#python)
+  - [Install the container](#install-the-container)
+    - [Configuration](#configuration)
+  - [Tests](#tests)
+  - [how to's](#how-tos)
+  - [License](#license)
+  - [Issues](#issues)
+
+<!--TOC-->
+
 ## Introduction
 
 This is an Docker container for Vault running on Alpine.
