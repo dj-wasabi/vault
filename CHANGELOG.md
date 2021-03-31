@@ -90,6 +90,10 @@
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.2.3...1.3.0)
 
+**Implemented enhancements:**
+
+- Updating Vault to 1.3.0 [\#21](https://github.com/dj-wasabi/vault/pull/21) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [1.2.3](https://github.com/dj-wasabi/vault/tree/1.2.3) (2019-09-22)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.2.2...1.2.3)
@@ -112,7 +116,6 @@
 
 **Implemented enhancements:**
 
-- Updating Vault to 1.3.0 [\#21](https://github.com/dj-wasabi/vault/pull/21) ([dj-wasabi](https://github.com/dj-wasabi))
 - Updating Vault to 1.2.0 [\#18](https://github.com/dj-wasabi/vault/pull/18) ([dj-wasabi](https://github.com/dj-wasabi))
 - Updating Alpine version [\#17](https://github.com/dj-wasabi/vault/pull/17) ([dj-wasabi](https://github.com/dj-wasabi))
 
