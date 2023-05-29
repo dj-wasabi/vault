@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/dj-wasabi/vault/tree/HEAD)
+
+[Full Changelog](https://github.com/dj-wasabi/vault/compare/1.7.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump requests from 2.20.1 to 2.31.0 [\#34](https://github.com/dj-wasabi/vault/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.7.0](https://github.com/dj-wasabi/vault/tree/1.7.0) (2021-03-30)
 
 [Full Changelog](https://github.com/dj-wasabi/vault/compare/1.6.2...1.7.0)
