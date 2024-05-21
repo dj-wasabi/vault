@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump requests from 2.31.0 to 2.32.0 [\#35](https://github.com/dj-wasabi/vault/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump requests from 2.20.1 to 2.31.0 [\#34](https://github.com/dj-wasabi/vault/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.7.0](https://github.com/dj-wasabi/vault/tree/1.7.0) (2021-03-30)
